@@ -30,12 +30,14 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@RequestMapping(value = "/test/user")
+@RequestMapping(value = "/user")
 @RestController
 public class UserController {
 
+    @Autowired
     UserRepository userRepository;
 
+    @Autowired
     UserMapper userMapper;
 
     @PutMapping(value = "/update/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
